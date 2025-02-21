@@ -19,37 +19,32 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Mario Andree",
+									"value": "David Emanuel",
 									"type": "text"
 								},
 								{
 									"key": "surname",
-									"value": "Rodriguez Zamboni",
+									"value": "Morente Gonzalez",
 									"type": "text"
 								},
 								{
 									"key": "username",
-									"value": "mrodriguez",
+									"value": "dmorente",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "mrodriguez@gmail.com",
+									"value": "dmorente@gmail.com",
 									"type": "text"
 								},
 								{
 									"key": "phone",
-									"value": "56014229",
+									"value": "12345678",
 									"type": "text"
 								},
 								{
 									"key": "password",
-									"value": "Mario_Rodriguez292",
-									"type": "text"
-								},
-								{
-									"key": "role",
-									"value": "ADMIN_ROLE",
+									"value": "David_Morente242",
 									"type": "text"
 								},
 								{
@@ -86,7 +81,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"mrodriguez\",\r\n    \"password\": \"12345678\"\r\n}",
+							"raw": "{\r\n    \"username\": \"dmorente\",\r\n    \"password\": \"David_Morente242\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -160,7 +155,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I2NTZkYmU5NWQ4NGZiNWYwYzNmOWEiLCJpYXQiOjE3NDAwMDMxMzYsImV4cCI6MTc0MDAwNjczNn0.sIJoL0gqiaua9XHxw1N4czpn1pMzVOkqMoBqPGyzS2s",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I4ODMwNDEzYjJkZDRlZjVjN2QxZWIiLCJpYXQiOjE3NDAxNDU0MjQsImV4cCI6MTc0MDE0OTAyNH0.ZM2YhlX7FHjJgfGGCnlotrQM0rLNxz6om4QVccyQyz8",
 									"type": "string"
 								}
 							]
@@ -403,7 +398,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzE1ODgsImV4cCI6MTczOTM3NTE4OH0.vgT9O9tcrf_yzS2rphxgWJj6W4BS0SmYM6TFUBbFCIY",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I3ZjkyZDE0ZmI1YTY2MDllMjQ3NzIiLCJpYXQiOjE3NDAxMTA0OTYsImV4cCI6MTc0MDExNDA5Nn0.rNfoQfiUTAfZcznfUFsnsv0QZ3DeBSLmwZVXr_r7bvM",
 									"type": "string"
 								}
 							]
@@ -412,7 +407,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Bebidas\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Odio\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -553,11 +548,21 @@
 				{
 					"name": "Add Post",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I3ZmE4YjMwMDM0OTM5MmVhNjEwNGQiLCJpYXQiOjE3NDAxNDUyOTcsImV4cCI6MTc0MDE0ODg5N30.H5qJlLvh_RiCyJI0hohJbOSU912ij5qx_00YjB3JAZY",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"TE ODIO MARIO\",\r\n    \"text\": \"Hago esta publicacion para confesar publicamente que odio a Mario\",\r\n    \"categoryId\": \"\"\r\n}",
+							"raw": "{\r\n    \"title\": \"TE ODIO MARIO\",\r\n    \"text\": \"Hago esta publicacion para confesar publicamente que odio a Mario\",\r\n    \"categorys\": \"67b7fad0300349392ea61054\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -592,7 +597,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I3ZjkyZDE0ZmI1YTY2MDllMjQ3NzIiLCJpYXQiOjE3NDAxMTA0OTYsImV4cCI6MTc0MDExNDA5Nn0.rNfoQfiUTAfZcznfUFsnsv0QZ3DeBSLmwZVXr_r7bvM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I3ZmE4YjMwMDM0OTM5MmVhNjEwNGQiLCJpYXQiOjE3NDAxNDUyOTcsImV4cCI6MTc0MDE0ODg5N30.H5qJlLvh_RiCyJI0hohJbOSU912ij5qx_00YjB3JAZY",
 									"type": "string"
 								}
 							]
@@ -663,7 +668,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I3ZjkyZDE0ZmI1YTY2MDllMjQ3NzIiLCJpYXQiOjE3NDAxMTA0OTYsImV4cCI6MTc0MDExNDA5Nn0.rNfoQfiUTAfZcznfUFsnsv0QZ3DeBSLmwZVXr_r7bvM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I3ZmE4YjMwMDM0OTM5MmVhNjEwNGQiLCJpYXQiOjE3NDAxMTMwODYsImV4cCI6MTc0MDExNjY4Nn0.7o5MtVWQ20zdo8gI31SxMaKB3ypqzpqfsmbAM-SBGf8",
 									"type": "string"
 								}
 							]
@@ -680,7 +685,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/post/updatePost/67b7fd358bd2cfd17ed4777a",
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/post/updatePost/67b80480df92319b7776361f",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -694,7 +699,7 @@
 								"v1",
 								"post",
 								"updatePost",
-								"67b7fd358bd2cfd17ed4777a"
+								"67b80480df92319b7776361f"
 							]
 						}
 					},
@@ -703,10 +708,29 @@
 				{
 					"name": "Delete Post",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I3ZmE4YjMwMDM0OTM5MmVhNjEwNGQiLCJpYXQiOjE3NDAxNDU0NzcsImV4cCI6MTc0MDE0OTA3N30.a2ggGNZGZLv3wJnPMXPv6O6WOi0I4DeIioczMCZGR4o",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/post/deletePost/67b7fd358bd2cfd17ed4777a",
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/post/deletePost/67b882c713b2dd4ef5c7d1e6",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -720,7 +744,173 @@
 								"v1",
 								"post",
 								"deletePost",
-								"67b7fd358bd2cfd17ed4777a"
+								"67b882c713b2dd4ef5c7d1e6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Create Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I4ODMwNDEzYjJkZDRlZjVjN2QxZWIiLCJpYXQiOjE3NDAxNDY0NjksImV4cCI6MTc0MDE1MDA2OX0.8Uxq7bReQeKzl_PYYQ6u-AoM4DAm87IX_RZbGXJq4lw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"No digas eso de Mario vos\",\r\n    \"post\": \"67b88744d55d51f097ebad0a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/comment/createComment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"comment",
+								"createComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comments By Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I4ODMwNDEzYjJkZDRlZjVjN2QxZWIiLCJpYXQiOjE3NDAxNDY0NjksImV4cCI6MTc0MDE1MDA2OX0.8Uxq7bReQeKzl_PYYQ6u-AoM4DAm87IX_RZbGXJq4lw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/comment/getComments/67b88744d55d51f097ebad0a",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"comment",
+								"getComments",
+								"67b88744d55d51f097ebad0a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I4ODMwNDEzYjJkZDRlZjVjN2QxZWIiLCJpYXQiOjE3NDAxNDY0NjksImV4cCI6MTc0MDE1MDA2OX0.8Uxq7bReQeKzl_PYYQ6u-AoM4DAm87IX_RZbGXJq4lw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"Estoy de acuerdo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/comment/updateComment/67b887693a2ef61bd153a190",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"comment",
+								"updateComment",
+								"67b887693a2ef61bd153a190"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I3ZmE4YjMwMDM0OTM5MmVhNjEwNGQiLCJpYXQiOjE3NDAxNDY3NDYsImV4cCI6MTc0MDE1MDM0Nn0.o-AmpGjARGTiZrUa6YIWO7_UwYhMVH3QMbvzNZzyf_8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/comment/deleteComment/67b888293a2ef61bd153a19c",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"comment",
+								"deleteComment",
+								"67b888293a2ef61bd153a19c"
 							]
 						}
 					},

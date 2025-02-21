@@ -7,18 +7,27 @@ import User from '../user/user.model.js'
 
 export const savePost = async (req, res) => {
     try {
-        const { title, categorys, text, users } = req.body;
+        const token = req.headers.authorization?.split(" ")[1];
 
-        if (!users) {
-            return res.status(400).json({ message: "El ID del usuario es obligatorio" });
+        if (!token) {
+            return res.status(401).json({ message: "No estás autenticado" });
         }
 
-        const userExists = await User.findById(users);
+        const decoded = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
+        const userId = decoded.uid; 
+
+        if (!userId) {
+            return res.status(403).json({ message: "No se pudo obtener el ID del usuario desde el token" });
+        }
+
+        const userExists = await User.findById(userId);
         if (!userExists) {
             return res.status(404).json({ message: "Usuario no encontrado" });
         }
 
+        const { title, categorys, text } = req.body;
         const categoryId = categorys || "67ad0a98a2a5eeaa2dd27999";
+
         const category = await Category.findById(categoryId);
         if (!category) {
             return res.status(404).json({ message: "Categoría no encontrada" });
@@ -27,7 +36,7 @@ export const savePost = async (req, res) => {
         const newPost = new Post({
             title,
             categorys: categoryId,
-            users,
+            users: userId,
             text
         });
 
@@ -43,6 +52,7 @@ export const savePost = async (req, res) => {
             message: "Publicación guardada y categoría actualizada",
             product: newPost
         });
+
     } catch (error) {
         res.status(500).json({
             success: false,
