@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "cabda653-fb55-46dc-aa3e-78dc4d928ca3",
+		"_postman_id": "f20d8006-3b21-4d4e-9ce6-766c72bb5d68",
 		"name": "API-GestorOpiniones-2023147",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37585425"
@@ -153,6 +153,41 @@
 			"name": "User",
 			"item": [
 				{
+					"name": "List Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I2NTZkYmU5NWQ4NGZiNWYwYzNmOWEiLCJpYXQiOjE3NDAwMDMxMzYsImV4cCI6MTc0MDAwNjczNn0.sIJoL0gqiaua9XHxw1N4czpn1pMzVOkqMoBqPGyzS2s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "List User By Id",
 					"request": {
 						"auth": {
@@ -183,41 +218,6 @@
 								"user",
 								"findUser",
 								"67b656dbe95d84fb5f0c3f9a"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List Users",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I2NTZkYmU5NWQ4NGZiNWYwYzNmOWEiLCJpYXQiOjE3NDAwMDMxMzYsImV4cCI6MTc0MDAwNjczNn0.sIJoL0gqiaua9XHxw1N4czpn1pMzVOkqMoBqPGyzS2s",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/user/",
-							"protocol": "http",
-							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
-							],
-							"port": "3000",
-							"path": [
-								"gestorOpiniones",
-								"v1",
-								"user",
-								""
 							]
 						}
 					},
@@ -385,6 +385,342 @@
 								"user",
 								"updateProfilePicture",
 								"67b656dbe95d84fb5f0c3f9a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzE1ODgsImV4cCI6MTczOTM3NTE4OH0.vgT9O9tcrf_yzS2rphxgWJj6W4BS0SmYM6TFUBbFCIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Bebidas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/category/createCategory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"category",
+								"createCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Categorys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/category/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzUyODMsImV4cCI6MTczOTM3ODg4M30.3Rl2AkAVoA_rWKHmUOP25SNo3QFwRlxfS5vLTsdM-QQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/category/deleteCategory/67acc24e3b2b07a2e188009b",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"category",
+								"deleteCategory",
+								"67acc24e3b2b07a2e188009b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FjYjNjM2YwMTMzNTUxZmI2NDliNmQiLCJpYXQiOjE3MzkzNzE1ODgsImV4cCI6MTczOTM3NTE4OH0.vgT9O9tcrf_yzS2rphxgWJj6W4BS0SmYM6TFUBbFCIY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Refrescos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/category/updateCategory/67acc24e3b2b07a2e188009b",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"category",
+								"updateCategory",
+								"67acc24e3b2b07a2e188009b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Add Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"TE ODIO MARIO\",\r\n    \"text\": \"Hago esta publicacion para confesar publicamente que odio a Mario\",\r\n    \"categoryId\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/post/addPost",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"post",
+								"addPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I3ZjkyZDE0ZmI1YTY2MDllMjQ3NzIiLCJpYXQiOjE3NDAxMTA0OTYsImV4cCI6MTc0MDExNDA5Nn0.rNfoQfiUTAfZcznfUFsnsv0QZ3DeBSLmwZVXr_r7bvM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/post/getPostAvailables",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"post",
+								"getPostAvailables"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Post By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I3ZjkyZDE0ZmI1YTY2MDllMjQ3NzIiLCJpYXQiOjE3NDAxMTA0OTYsImV4cCI6MTc0MDExNDA5Nn0.rNfoQfiUTAfZcznfUFsnsv0QZ3DeBSLmwZVXr_r7bvM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/post/findPost/67b7fd358bd2cfd17ed4777a",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"post",
+								"findPost",
+								"67b7fd358bd2cfd17ed4777a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2I3ZjkyZDE0ZmI1YTY2MDllMjQ3NzIiLCJpYXQiOjE3NDAxMTA0OTYsImV4cCI6MTc0MDExNDA5Nn0.rNfoQfiUTAfZcznfUFsnsv0QZ3DeBSLmwZVXr_r7bvM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"TE AMO MARIO\",\r\n    \"text\": \"Hago esta publicacion para confesar publicamente que amo a Mario\",\r\n    \"categorys\": \"67b7fad0300349392ea61054\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/post/updatePost/67b7fd358bd2cfd17ed4777a",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"post",
+								"updatePost",
+								"67b7fd358bd2cfd17ed4777a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3000/gestorOpiniones/v1/post/deletePost/67b7fd358bd2cfd17ed4777a",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"gestorOpiniones",
+								"v1",
+								"post",
+								"deletePost",
+								"67b7fd358bd2cfd17ed4777a"
 							]
 						}
 					},

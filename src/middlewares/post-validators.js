@@ -7,7 +7,7 @@ import { hasRoles } from "./validate-roles.js";
 
 export const createPostValidator = [
     validateJWT,
-    hasRoles("ADMIN_ROLE"),
+    hasRoles("ADMIN_ROLE", "USER_ROLE"),
     body("title").notEmpty().withMessage("El titulo es requerido"),
     body("text").notEmpty().withMessage("El texto es requerido"),
     validarCampos,
@@ -30,7 +30,7 @@ export const getPostValidator = [
 
 export const updatePostValidator = [
     validateJWT,
-    hasRoles("ADMIN_ROLE"),
+    hasRoles("ADMIN_ROLE", "USER_ROLE"),
     param("id").isMongoId().withMessage("No es un ID válido de MongoDB"),
     param("id").custom(postExists),
     body("title").optional().notEmpty().withMessage("El titulo es requerido"),
@@ -41,7 +41,7 @@ export const updatePostValidator = [
 
 export const deletePostValidator = [
     validateJWT,
-    hasRoles("ADMIN_ROLE"),
+    hasRoles("ADMIN_ROLE", "USER_ROLE"),
     param("id").isMongoId().withMessage("No es un ID válido de MongoDB"),
     param("id").custom(postExists),
     validarCampos,
