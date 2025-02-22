@@ -10,6 +10,7 @@ import postRoutes from "../src/post/post.routes.js"
 import commentRoutes from "../src/comment/comment.routes.js"
 import categoryRoutes from "../src/category/category.routes.js"
 import apiLimiter from "../src/middlewares/rate-limit-validator.js"
+import { swaggerDocs, swaggerUI } from "./documentation.js"
 import { dbConnection } from "./mongo.js"
 
 const middlewares = (app) => {
@@ -41,6 +42,7 @@ const routes = (app) =>{
     app.use("/gestorOpiniones/v1/post", postRoutes)
     app.use("/gestorOpiniones/v1/category", categoryRoutes)
     app.use("/gestorOpiniones/v1/comment", commentRoutes)
+    app.use("/gestorOpiniones/v1/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs))
 }
 
 const conectarDB = async () =>{
